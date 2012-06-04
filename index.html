@@ -8,11 +8,12 @@
             paths: {
                 cs: 'https://raw.github.com/jrburke/require-cs/master/cs',
                 CoffeeScript: 'https://raw.github.com/jrburke/require-cs/master/CoffeeScript'
-            }
-        }, ['cs!main'], function() {
+            }    
+        }, ['cs!csmain'], function() {
+            // Require 'main' above instead to see it work with regular JavaScript
             d = document.getElementById('req');
             d.innerText = 'Require succeeded';
-        })        
+        });        
     })();
   </script>
 </head>
