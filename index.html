@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://raw.github.com/jrburke/requirejs/master/require.js"></script>
+  <script>
+    (function(){
+        require({
+            paths: {
+                cs: 'https://raw.github.com/jrburke/require-cs/master/cs',
+                CoffeeScript: 'https://raw.github.com/jrburke/require-cs/master/CoffeeScript'
+            }
+        }, ['cs!main'], function() {
+            d = document.getElementById('req');
+            d.innerText = 'Require succeeded';
+        })        
+    })();
+  </script>
+</head>
+<body>
+<div id="main">Main failed</div>
+<div id="req">Require failed</div>
+</body>
+</html>
